@@ -15,6 +15,8 @@ neste app será possivel cadastrar o orfanato e oferecer sua localização para 
     + Pratica em html e css
     + primeiro contato com animações em css utilizando @key-frames e a propriedade animation   
 + day 2
+    + Grid e clamp em css
+    + utilizar a biblioteca de mapas leaftlet
 + day 3
 + day 4
 + day 5
