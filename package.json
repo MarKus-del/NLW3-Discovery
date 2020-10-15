@@ -1,0 +1,25 @@
+{
+  "name": "NLW3-Discovery",
+  "version": "1.0.0",
+  "description": "Este projeto foi desenvolvido durante a terceira versão da NLW (next level week) evento online e gratuito da RocketSeat, que tem como objetivo de ensinar a como criar uma aplicação do zero para devs iniciante na trilha discovery ou apresentar novas tecnologias utilizadas no mercado para quem já tem experiencia em desenvolvimento na trilha omnistack.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarKus-del/NLW3-Discovery.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarKus-del/NLW3-Discovery/issues"
+  },
+  "homepage": "https://github.com/MarKus-del/NLW3-Discovery#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "nodemon": "^2.0.5"
+  }
+}
