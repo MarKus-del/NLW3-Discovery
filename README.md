@@ -29,4 +29,37 @@ neste app será possivel cadastrar o orfanato e oferecer sua localização para 
     + criar server com node.js, express e nodemon
     + usar o template engine handlebars.js para deixar as paginas html mais dinamicas
 + day 5
+    + adiciona o banco de dados relacional sqlite
+    + comandos basicos de sql
 
+## Desafios
+
+ * [X] aprender operador ternario
+
+    ~~~js
+     orphanage.open_on_weekends = (orphanage.open_on_weekends == "0")? false: true;
+    ~~~
+
+ * [X] validar campo de localização
+
+    ~~~js
+    function validate(event){
+    const lat = document.querySelector('[name=lat]').value;
+    const lng = document.querySelector('[name=lng]').value;
+
+    //validar se lat e lng estâo preenchidos
+    const needsLatAndLng = (lat=="" || lng=="")? true: false;
+
+        if(needsLatAndLng){
+            
+            const map = document.querySelector('.map-container');
+            const spanError = document.querySelector('.msg-erro');
+
+            map.classList.add('erro')
+            spanError.classList.remove("off")
+            spanError.classList.add("on")
+
+            event.preventDefault();
+        }
+    }
+    

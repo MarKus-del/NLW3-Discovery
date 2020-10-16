@@ -15,6 +15,18 @@ let marker;
 
 //create and add marker
 map.on('click', (event) => {
+
+    const mapContainer = document.querySelector('.map-container');
+
+    if(mapContainer.classList.contains('erro')){
+        mapContainer.classList.remove('erro')
+
+        const spanError = document.querySelector('.msg-erro');
+        spanError.classList.remove('on')
+        spanError.classList.add('off')
+
+    }
+
     const lat = event.latlng.lat;
     const lng = event.latlng.lng;
 
@@ -90,4 +102,24 @@ function toggleSelect(event){
     //atualizar o meu input hidden com o valor selecinado
     const input = document.querySelector('[name="open_on_weekends"]')
     input.value = button.dataset.value
+}
+
+function validate(event){
+    const lat = document.querySelector('[name=lat]').value;
+    const lng = document.querySelector('[name=lng]').value;
+
+    //validar se lat e lng estâo preenchidos
+    const needsLatAndLng = (lat=="" || lng=="")? true: false;
+
+    if(needsLatAndLng){
+        
+        const map = document.querySelector('.map-container');
+        const spanError = document.querySelector('.msg-erro');
+
+        map.classList.add('erro')
+        spanError.classList.remove("off")
+        spanError.classList.add("on")
+
+        event.preventDefault();
+    }
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,12 +47,13 @@
 
         <main class="animate=appear with-sidebar">
 
-            <form action="">
+            <form action="/save-orphanage" method="POST" onsubmit="validate(event)">
 
                 <fieldset>
                     <legend>Dados</legend>
 
-                    <div class="map-container">
+                    <span class="msg-erro off">*Entre com a localização do orfanato</span>
+                    <div class="map-container ">
                         <div id="mapid"></div>
                         <input type="hidden" name="lat">
                         <input type="hidden" name="lng">
@@ -62,7 +64,10 @@
                                 Clique no mapa para adicionar a localização
                             </a>
                         </footer>
+
                     </div>
+
+
 
                     <div class="input-block">
                         <label for="name">Nome</label>
@@ -84,8 +89,8 @@
 
                         <div class="images-upload" id="images">
                             <div class="new-upload">
-                                <input name="images" placeholder="Cole o link da foto aqui" required>
-                                
+                                <input type="url" name="images" placeholder="Cole o link da foto aqui" required>
+
                                 <span onclick="deleteField(event)">
                                     <img src="images/remove-file.svg" alt="remove foto">
                                 </span>
@@ -119,15 +124,10 @@
 
 
                         <div class="button-select">
-                            <button 
-                                data-value="1" 
-                                onclick="toggleSelect(event)" type="button" class="active"
-                            >Sim</button>
+                            <button data-value="1" onclick="toggleSelect(event)" type="button"
+                                class="active">Sim</button>
 
-                            <button 
-                                data-value="0" 
-                                onclick="toggleSelect(event)" type="button"
-                            >Não</button>
+                            <button data-value="0" onclick="toggleSelect(event)" type="button">Não</button>
                         </div>
 
                         <button type="submit" class="primary-button">Confirmar</button>
